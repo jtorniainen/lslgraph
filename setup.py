@@ -11,8 +11,6 @@ setup(name='lslgraph',
       package_dir={'lslgraph': 'lslgraph'},
       include_package_data=False,
       install_requires=['pyqtgraph>=0.9.10',
-                        'PyZMQ>=14.3.1',
-                        'Waitress>=0.8.9',
                         'pylsl>=1.10.4'],
       entry_points={"console_scripts":
-                    ["lslgraph = lslgraph:run_from_cli"]})
+                    ["lslgraph = lslgraph.lslgraph:run_from_cli"]})

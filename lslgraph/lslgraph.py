@@ -12,9 +12,9 @@
 import pyqtgraph as pg
 from pyqtgraph import numpy as np
 import pylsl
-import sys
 from PyQt4 import QtGui
 import os
+import sys
 
 
 class Grapher():
