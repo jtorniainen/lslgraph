@@ -229,15 +229,15 @@ def list_streams():
         print(stream.name())
 
 
-def run_from_cli(argv):
-    if len(argv) == 1:
+def run_from_cli():
+    if len(sys.argv) == 1:
         list_streams()
-    elif len(argv) == 2:
-        start_grapher(stream_name=argv[1])
-    elif len(argv) == 3:
-        start_grapher(stream_name=argv[1], buffer_size=argv[2])
+    elif len(sys.argv) == 2:
+        start_grapher(stream_name=sys.argv[1])
+    elif len(sys.argv) == 3:
+        start_grapher(stream_name=sys.argv[1], buffer_size=sys.argv[2])
     else:
         print('lslgrapher takes max 2 arguments (stream_name and buffer_size)')
 
 if __name__ == "__main__":
-    run_from_cli(sys.argv)
+    run_from_cli()
