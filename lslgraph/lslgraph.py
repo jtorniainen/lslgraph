@@ -139,7 +139,10 @@ class Grapher():
 
 def start_grapher(stream_name=None, buffer_size=512):
     buffer_size = int(buffer_size)  # Can be string if given as argument!
-    streams = pylsl.resolve_byprop('name', stream_name, timeout=5)
+    if stream_name:
+        streams = pylsl.resolve_byprop('name', stream_name, timeout=5)
+    else:
+        streams = None
 
     if streams:
         print('Connecting to stream: %s' % streams[0])
