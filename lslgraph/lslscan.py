@@ -1,3 +1,14 @@
+#!/usr/bin/env python3
+
+# Jari Torniainen <jari.torniainen@ttl.fi>,
+# Finnish Institute of Occupational Health
+# Copyright 2015
+#
+# This code is released under the MIT license
+# http://opensource.org/licenses/mit-license.php
+#
+# Please see the file LICENSE for details
+
 import pylsl
 import time
 import colorama

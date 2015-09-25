@@ -15,6 +15,7 @@ import pylsl
 from PyQt4 import QtGui
 import os
 import sys
+import lslscan
 
 
 class Grapher():
@@ -147,9 +148,12 @@ def start_grapher(stream_name=None, buffer_size=512):
     if streams:
         print('Connecting to stream: %s' % streams[0])
         Grapher(streams[0], buffer_size)
-    else:
+    elif stream_name:
         print('No stream by name %s found...' % stream_name)
-        list_streams()
+        lslscan.scan_ui()
+
+    else:
+        lslscan.scan_ui()
 
 
 def list_streams():
