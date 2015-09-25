@@ -146,22 +146,15 @@ def start_grapher(stream_name=None, buffer_size=512):
         streams = None
 
     if streams:
-        print('Connecting to stream: %s' % streams[0])
+        stream_info = lslscan.get_stream_info_string(streams[0])
+        print('Connecting to stream: {}'.format(stream_info))
         Grapher(streams[0], buffer_size)
     elif stream_name:
-        print('No stream by name %s found...' % stream_name)
+        print('No stream by name {} found...'.format(stream_name))
         lslscan.scan_ui()
 
     else:
         lslscan.scan_ui()
-
-
-def list_streams():
-    streams = pylsl.resolve_streams()
-    print('Available streams:')
-    print('==================')
-    for stream in streams:
-        print(stream.name())
 
 
 def run_from_cli():

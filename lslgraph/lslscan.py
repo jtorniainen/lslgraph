@@ -51,6 +51,15 @@ def scan_ui():
                                         stream_uid.ljust(10)))
 
 
+def get_stream_info_string(stream):
+    """ Returns (compact) string with stream information. """
+    name = stream.name()
+    hostname = stream.hostname()
+    source_id = stream.source_id()
+    uid = stream.uid()
+    return '{}@{}[{}][{}]'.format(name, hostname, source_id, uid)
+
+
 def peek(stream_name):
     """ Connects to the specified stream and checks if it outputs samples """
     # TODO This functionality does not work yet
