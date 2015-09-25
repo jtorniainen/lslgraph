@@ -11,6 +11,8 @@ setup(name='lslgraph',
       package_dir={'lslgraph': 'lslgraph'},
       include_package_data=False,
       install_requires=['pyqtgraph>=0.9.10',
-                        'pylsl>=1.10.4'],
+                        'pylsl>=1.10.4',
+                        'colorama>=0.3.3'],
       entry_points={"console_scripts":
-                    ["lslgraph = lslgraph.lslgraph:run_from_cli"]})
+                    ["lslgraph = lslgraph.lslgraph:run_from_cli",
+                     "lslscan = lslgraph.lslscan:scan_ui"]})
