@@ -15,7 +15,7 @@ import pylsl
 from PyQt4 import QtGui
 import os
 import sys
-import lslscan
+from . import lslscan
 
 
 class Grapher():
